@@ -1,16 +1,50 @@
 * {
   margin: 0;
   padding: 0;
+  font-family:'Courier New', Courier, monospace;
+}
+
+#info {                       
+  position: relative;
+  display: inline-block;
+}
+#info #infotext {
+  visibility: hidden;
+  width:420px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#info:hover #infotext {
+  visibility: visible;
+  opacity: 1;
 }
 
 #header {
   background-color: rgb(0, 123, 238);
-  height: 28vh;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   color:white;
+}
+
+#headerClue {
+  height: 7vh;
+  background-color: rgb(0, 123, 238);
+  color: white;
+  justify-content: center;
+  display: flex;
+
 }
 #NewGame {
   display: flex;
@@ -18,8 +52,17 @@
   justify-content: center;
   color: white;
   background-color: green;
-  height: 7vh;
+  height: 10vh;
 
+}
+
+#Timer {
+  display: flex;
+  justify-content:center;
+  background-color: rgb(0,0,128);
+  align-items: center;
+  height: 5vh;
+  color: white;
 }
 
 #container {
@@ -30,10 +73,12 @@
   grid-template-rows: 1fr 1fr;
 }
 
-#status {
+#statusdisplay {
   display:flex;
-  height: 2vh;
+  background-color: rgb(0,0,128);
+  height: 5vh;
   justify-content: center;
+  color: white;
   align-items: center;
 }
 

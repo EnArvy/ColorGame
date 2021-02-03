@@ -6,19 +6,30 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body id = "body" onload="newGame()">
-    <div id="header">
-      <h2>The Great</h2>
-      <h1 id="headerClue">RGB(xxx,xxx,xxx)</h1>
-      <h2>Guessing Game</h2>
+    <div id="header">                                               <!--header-->
+      <div ><h1>RGB Guessing Game&nbsp;</h1></div>
+      <div id="info">ⓘ
+        <span id="infotext">Guess the colour defined by the rgb given below. You have 3 tries and 20 seconds for each try.</span>
+      </div>
+      
+    </div>                                                           <!--header question-->
+    <div id="headerClue">
+      <h1 id="clue">RGB(xxx,xxx,xxx)</h1>
     </div>
-    <div id="NewGame">
-      <h3>New Game</h3>
+    
+    <div id="NewGame">                                                <!--new game button-->
+      <h2>New Game</h2>
     </div>
-    <div id="status">
-      <div><p>Tries left:</p></div>
+    <div id="Timer">                                                   <!--countdown-->
+      <div><h3>Timer:</h3></div>
+      <div><p id="sec">00</p></div>
+      <div><h3> sec</h3></div>
+    </div>
+    <div id="statusdisplay">                                             <!--game status-->
+      <div id="status"><p>Tries left:</p></div>
       <div id="counter"></div>
     </div>
-    <div id="container">
+    <div id="container">                                                   <!--buttons-->
       <div class="tile" id="1"></div>
       <div class="tile" id="2"></div>
       <div class="tile" id="3"></div>
