@@ -47,18 +47,20 @@ for ( let j=1; j<7; j++){                                        //clicking butt
       document.getElementById("status").innerHTML = "You Won, Click New Game to play again";
       counter=0;
       document.getElementById("counter").innerHTML="";
+      
       sec=NaN;
     }
     else{
       counter--;
       t[j].style.background = "black";
       this.removeEventListener("click",arguments.callee);
+      sec=20;
       if(counter==0){
         document.getElementById("status").innerHTML = "You Lost, Click New Game to play again";
         document.getElementById("counter").innerHTML="";
         sec=NaN;
       }  
-      sec=20;
+      
     }
     document.getElementById("counter").innerHTML = counter;
 
